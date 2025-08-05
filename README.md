@@ -2,7 +2,7 @@
 仮想環境を作る uv の学習
 
 ## uv 設定手順
-1. uv のインストール  
+### 1. uv のインストール  
 [uv公式インストールページ](https://docs.astral.sh/uv/getting-started/installation/)のとおりインストール
 
 ```
@@ -11,17 +11,17 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv --version
 ```
 
-2. プロジェクト作成
+### 2. プロジェクト作成
 ```
 # プロジェクト作成
 # すでにプロジェクトのフォルダがある場合は `uv init`
 uv init sample-project
 ```
-以下のファイルが作られる
+以下のファイルが作られる  
 ![created_files](./assets/image.png)
 
 
-3. 仮想環境作成
+### 3. 仮想環境作成
 ```
 uv venv
 ```
@@ -30,7 +30,7 @@ uv venv
 
 ※ python のバーションを変える場合は `uv python pin 3.x` を実行した後に venv を作成（python のバージョンがない場合は自動でインストールされる）
 
-4. ライブラリの追加
+### 4. ライブラリの追加
 ```
 uv add requests
 (uv pip install requests と同じだが、uv.lock や pyproject.toml が更新されないので、非推奨)
@@ -41,13 +41,13 @@ uv pip list
 `uv sync --update` で pyproject.toml の範囲内でバージョンのアップグレード  
 `uv remove requests` でライブラリの削除
 
-5. 仮想環境下での python 実行
+### 5. 仮想環境下での python 実行
 ```
 # 仮想環境を使ったシェルコマンドの実行
 uv run python main.py
 ```
 
-6. 仮想環境の再現
+### 6. 仮想環境の再現
 pyproject.toml, uv.lock, .python-version をコピーしたフォルダで以下を実行
 ```
 uv sync
