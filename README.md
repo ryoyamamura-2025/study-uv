@@ -48,18 +48,9 @@ uv run python main.py
 ```
 
 ### 6. 仮想環境の再現
-方法1. pyproject.toml, uv.lock, .python-version をコピーしたフォルダで以下を実行  
+pyproject.toml, uv.lock, .python-version をコピーしたフォルダで以下を実行  
 ```
 uv sync
-```
-
-方法2. pyproject.tomlにパッケージ一覧を記載し、以下のコマンドを実行
-```
-# 依存関係のインストール
-uv pip sync pyproject.toml
-
-# uv.lock に書き出し
-uv pip compile pyproject.toml --output-file uv.lock
 ```
 
 
